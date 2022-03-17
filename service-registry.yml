@@ -1,2 +1,9 @@
 server:
   port: 8091
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+
+  
+
