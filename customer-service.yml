@@ -12,7 +12,7 @@ eureka:
 resilience4j.circuitbreaker:
   instances:
     customerCB:
-      registerHealthIndicator: true
+      #registerHealthIndicator: true
       slidingWindowSize: 10
       permittedNumberOfCallsInHalfOpenState: 3
       slidingWindowType: TIME_BASED
