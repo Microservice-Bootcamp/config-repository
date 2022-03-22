@@ -11,7 +11,7 @@ eureka:
       
 resilience4j.circuitbreaker:
   instances:
-    customerCB:
+    depositoRetCB:
       registerHealthIndicator: true
       slidingWindowSize: 10
       permittedNumberOfCallsInHalfOpenState: 3
@@ -24,5 +24,5 @@ resilience4j.circuitbreaker:
 resilience4j:
   timelimiter:
     instances:
-      timeoutCustomer:
+      timeoutRetiro:
         timeoutDuration: 2s
