@@ -19,10 +19,9 @@ resilience4j.circuitbreaker:
       minimumNumberOfCalls: 20
       waitDurationInOpenState: 50s
       failureRateThreshold: 50
-      eventConsumerBufferSize: 10
-   
-resilience4j:
-  timelimiter:
-    instances:
-      timeoutCustomer:
-        timeoutDuration: 20s
+      eventConsumerBufferSize: 10   
+resilience4j.timelimiter:
+  instances:
+    customerCB:
+      timeoutDuration: 2s
+      cancelRunningFuture: true
