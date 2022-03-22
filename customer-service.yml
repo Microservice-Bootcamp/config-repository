@@ -20,3 +20,9 @@ resilience4j.circuitbreaker:
       waitDurationInOpenState: 50s
       failureRateThreshold: 50
       eventConsumerBufferSize: 10
+   
+resilience4j:
+  timelimiter:
+    instances:
+      timeoutCustomer:
+        timeoutDuration: 2s
