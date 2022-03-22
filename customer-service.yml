@@ -25,4 +25,4 @@ resilience4j:
   timelimiter:
     instances:
       timeoutCustomer:
-        timeoutDuration: 2s
+        timeoutDuration: 10s
