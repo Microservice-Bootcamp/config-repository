@@ -25,3 +25,9 @@ resilience4j.timelimiter:
     customerCB:
       timeoutDuration: 2s
       cancelRunningFuture: true
+      
+resilience4j.bulkhead:
+    instances:
+        customerCB:
+            maxWaitDuration: 10ms
+            maxConcurrentCalls: 20
