@@ -1,15 +1,15 @@
-server:
-  port: 8761
+#server:
+  #port: 8761
 eureka:
   instance:
-    #hostname: config-server-eureka.azurewebsites.net
-    hostname: localhost
+    hostname: service-registry.azurewebsites.net
+    #hostname: localhost
   client:
     fetch-registry: false
     register-with-eureka: false
     service-url:
-      #default-zone: http://${eureka.instance.hostname}:443/eureka/
-      default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      default-zone: http://${eureka.instance.hostname}:443/eureka/
+      #default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
   
 
