@@ -19,8 +19,10 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
-    service-url:
-      default-zone: https://service-registry.azurewebsites.net:443/eureka
+    #service-url:
+    serviceUrl:
+      defaultZone: https://service-registry.azurewebsites.net:443/eureka
+      #default-zone: https://service-registry.azurewebsites.net:443/eureka
       #default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
       
 resilience4j.circuitbreaker:
