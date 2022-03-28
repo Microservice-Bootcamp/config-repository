@@ -1,9 +1,21 @@
 #server:
   #port: 8093
+management:
+  server:
+    port: ${server.port}
+    
 eureka:
   instance:
     #hostname: localhost
     hostname: service-registry.azurewebsites.net
+    secure-port-enabled: true
+    nonsecure-port-enabled: false
+    nonSecurePort: 80
+    securePort: 443
+    instanceId: ${eureka.instance.hostname}:${spring.application.name}:443
+    statusPageUrl: https://${eureka.hostname}:443/actuator/info
+    healthCheckUrl: https://${eureka.hostname}:443/actuator/health
+    secureHealthCheckUrl: https://${eureka.hostname}:443/actuator/health
   client:
     fetch-registry: true
     register-with-eureka: true
