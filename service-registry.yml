@@ -1,8 +1,8 @@
 #server:
   #port: 8761
-management:
-  server:
-    port: ${server.port}
+#management:
+  #server:
+    #port: ${server.port}
   
 eureka:
   instance:
@@ -19,8 +19,10 @@ eureka:
   client:
     fetch-registry: false
     register-with-eureka: false
-    service-url:
-      default-zone: https://service-registry.azurewebsites.net:443/eureka/
+    serviceUrl:
+      defaultZone: https://service-registry.azurewebsites.net:443/eureka
+    #service-url:
+      #default-zone: https://service-registry.azurewebsites.net:443/eureka/
       #default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
   
