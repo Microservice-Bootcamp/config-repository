@@ -1,5 +1,9 @@
 #server:
   #port: 8761
+management:
+  server:
+    port: ${server.port}
+  
 eureka:
   instance:
     hostname: service-registry.azurewebsites.net
